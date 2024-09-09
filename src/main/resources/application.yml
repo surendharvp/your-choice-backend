@@ -1,0 +1,29 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/servicemarketdb
+    username: myuser
+    password: mypassword@321
+    driver-class-name: org.postgresql.Driver
+#  security:
+#    user:
+#      name: admin
+#      password: adminpassword
+#  autoconfigure:
+#    exclude: org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+#    database-platform=org:
+#      hibernate:
+#        dialect: PostgreSQLDialect
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        boot:
+          allow_jdbc_metadata_access: false
+#spring-doc:
+#  swagger-ui:
+#    query-config-enabled: true
+#  api-docs:
+#    path: /my-service/v3/api-docs
