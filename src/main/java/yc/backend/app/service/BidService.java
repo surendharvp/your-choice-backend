@@ -1,18 +1,18 @@
 package yc.backend.app.service;
 
-import com.example.platform.dto.BidRequest;
-import com.example.platform.models.Bid;
-import com.example.platform.models.Provider;
-import com.example.platform.models.ServiceRequest;
-import com.example.platform.repositories.BidRepository;
-import com.example.platform.repositories.ProviderRepository;
-import com.example.platform.repositories.ServiceRequestRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import yc.backend.app.dto.BidRequest;
+import yc.backend.app.model.Bid;
+import yc.backend.app.model.Provider;
+import yc.backend.app.model.ServiceRequest;
+import yc.backend.app.repository.ProviderRepository;
+import yc.backend.app.repository.BidRepository;
+import yc.backend.app.repository.ServiceRequestRepository;
 
 import java.util.List;
-import java.util.Optional;
+
 
 @Service
 public class BidService {

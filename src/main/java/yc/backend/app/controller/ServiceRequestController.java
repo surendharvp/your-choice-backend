@@ -2,13 +2,19 @@ package yc.backend.app.controller;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import yc.backend.app.dto.ServiceRequestDto;
+import yc.backend.app.model.ServiceRequest;
+import yc.backend.app.service.ServiceRequestService;
 
 @RestController
 @RequestMapping("/services")
@@ -19,9 +25,9 @@ public class ServiceRequestController {
 
     // Create a new service request (User posts the requirement)
     @PostMapping
-    public ResponseEntity<?> createServiceRequest(@RequestBody ServiceRequestDto serviceRequestDto, 
+    public ResponseEntity<?> createServiceRequest(@RequestBody ServiceRequestDto serviceRequestDto,
                                                   @AuthenticationPrincipal UserDetails userDetails) {
-        ServiceRequest serviceRequest = serviceRequestService.createServiceRequest(serviceRequestDto, userDetails);
+        ServiceRequest serviceRequest = serviceRequestService.createServiceRequest(serviceRequestDto, userDetails.getUsername());
         return ResponseEntity.status(HttpStatus.CREATED).body(serviceRequest);
     }
 

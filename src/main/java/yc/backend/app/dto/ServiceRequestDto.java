@@ -1,6 +1,10 @@
 package yc.backend.app.dto;
 
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 public class ServiceRequestDto {
     private String type;
     private Double amount;

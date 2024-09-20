@@ -1,10 +1,11 @@
 package yc.backend.app.service;
 
-import com.example.platform.models.Bid;
-import com.example.platform.models.ServiceRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Service;
+import yc.backend.app.model.Bid;
+import yc.backend.app.model.ServiceRequest;
 
 @Service
 public class NotificationService {

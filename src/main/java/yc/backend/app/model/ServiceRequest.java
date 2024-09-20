@@ -1,9 +1,14 @@
 package yc.backend.app.model;
 
 import java.time.LocalDateTime;
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Table(name = "service_requests")
+@Getter
+@Setter
 public class ServiceRequest {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

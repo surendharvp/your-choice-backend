@@ -1,13 +1,18 @@
 package yc.backend.app.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.web.bind.annotation.RestController;
+import yc.backend.app.model.Bid;
+import yc.backend.app.model.ServiceRequest;
 
 @RestController
 public class WebSocketController {
 
-    @Autowired
-    private SimpMessagingTemplate messagingTemplate;
+    private final SimpMessagingTemplate messagingTemplate;
+
+    public WebSocketController(SimpMessagingTemplate messagingTemplate) {
+        this.messagingTemplate = messagingTemplate;
+    }
 
     // Notify all service providers about a new service request
     public void notifyProviders(ServiceRequest serviceRequest) {

@@ -1,9 +1,13 @@
 package yc.backend.app.model;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
 @Entity
 @Table(name = "bids")
+@Getter
+@Setter
 public class Bid {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -1,15 +1,17 @@
 package yc.backend.app.service;
 
-import com.example.platform.dto.ServiceRequestDto;
-import com.example.platform.models.ServiceRequest;
-import com.example.platform.models.User;
-import com.example.platform.repositories.ServiceRequestRepository;
-import com.example.platform.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import yc.backend.app.dto.ServiceRequestDto;
+import yc.backend.app.model.Bid;
+import yc.backend.app.model.ServiceRequest;
+import yc.backend.app.model.User;
+import yc.backend.app.repository.ServiceRequestRepository;
+import yc.backend.app.repository.UserRepository;
 
 import java.util.Optional;
+
 
 @Service
 public class ServiceRequestService {
