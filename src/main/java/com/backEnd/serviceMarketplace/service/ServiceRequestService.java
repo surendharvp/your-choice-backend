@@ -4,7 +4,8 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.backEnd.serviceMarketplace.repository.ServiceRequestRepository;
+import com.backEnd.serviceMarketplace.model.ServiceRequest;
+import com.backEnd.serviceMarketplace.repository.*;
 
 @Service
 public class ServiceRequestService {

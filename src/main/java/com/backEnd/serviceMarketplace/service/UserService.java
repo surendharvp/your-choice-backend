@@ -3,6 +3,7 @@ package com.backEnd.serviceMarketplace.service;
 import org.springframework.stereotype.Service;
 
 import com.backEnd.serviceMarketplace.model.User;
+import com.backEnd.serviceMarketplace.repository.UserRepository;
 
 @Service
 public class UserService {
