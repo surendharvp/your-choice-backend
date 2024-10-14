@@ -1,8 +1,11 @@
 package com.backEnd.serviceMarketplace.model;
-import com.backEnd.serviceMarketplace.entity.ServiceRequest;
-import com.backEnd.serviceMarketplace.entity.User;
-
-import jakarta.persistence.*;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 public record Bid(
 	    @Id @GeneratedValue(strategy = GenerationType.IDENTITY) 
 	    Long id,

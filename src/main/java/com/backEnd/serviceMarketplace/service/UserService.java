@@ -2,7 +2,7 @@ package com.backEnd.serviceMarketplace.service;
 
 import org.springframework.stereotype.Service;
 
-import com.backEnd.serviceMarketplace.entity.User;
+import com.backEnd.serviceMarketplace.model.User;
 
 @Service
 public class UserService {

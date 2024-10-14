@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.backEnd.serviceMarketplace.entity.User;
+import com.backEnd.serviceMarketplace.model.User;
 import com.backEnd.serviceMarketplace.service.UserService;
 
 @RestController

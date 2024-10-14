@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import com.backEnd.serviceMarketplace.model.Bid;
+import com.backEnd.serviceMarketplace.repository.BidRepository;
 
 @Service
 public class BidService {
